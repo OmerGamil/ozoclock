@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@100;200;800&display=swap');
+
+@font-face {
+    font-family: 'Impact LT Std';
+    src: url('fonts/ImpactLTStd.eot');
+    src: url('fonts/ImpactLTStd.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ImpactLTStd.woff2') format('woff2'),
+         url('fonts/ImpactLTStd.woff') format('woff'),
+         url('fonts/ImpactLTStd.ttf')  format('truetype'),
+         url('fonts/ImpactLTStd.svg#Impact LT Std') format('svg');
+}
+
+body ,button ,input{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+body{
+    margin: 72px 140px 0px;
+}
+
+/* color: #2b2c3c; */
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    font-size: 100px;
+    color: black;
+    letter-spacing: 1;
+    display: inline-block;
+}
+
+#controls {
+    display: inline-block;
+    width: 46%;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 0px 42px 42px 0px;
+}
+
+.input-group {
+    margin: 26px 0px;
+}
+
+label {
+    display: inline-block;
+    width: 24%;
+    font-size: 30px;
+    font-weight: 200;
+    padding: 12px;
+    color: black;
+}
+
+input {
+    width: 60%;
+    font-size: 30px;
+    font-weight: 200;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    padding-left: 6px;
+    outline: none;
+    color: black;
+}
+
+input:disabled {
+    background-color: white;
+    opacity: 0.6;
+}
+
+button {
+    padding: 12px 62px;
+    font-size: 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+header {
+    display: block;
+    height: 10%;
+}
+
+#sound-button {
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #222;
+    margin-left: 40px;
+    margin-top: 5.7%;
+    float: right;
+}
+
+#volume-icon {
+    font-size: 24px;
+}
+
+button:hover {
+    opacity: .9;
+}
+
+button:disabled {
+    opacity: .3;
+}
+
+h2 {
+    display: inline-block;
+    padding-left: 100px;
+    font-size: 144px;
+    font-weight: 200;
+    margin: 12px 0;
+    vertical-align: top;
+}
