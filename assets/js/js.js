@@ -3,25 +3,20 @@ let TimerObj = {
     seconds : 0 ,
     timerID : 0
 }
+
 let muted = false;
 
-$("#sound-button").hover(function(){
-    $("#volume-icon").addClass("fa-shake");
-}, function(){
-    $("#volume-icon").removeClass("fa-shake");
-});
-
 function soundButton() {
-    if ($("#volume-icon").attr("class") === "fas fa-volume-mute"){
-        console.log("yes");
+    let volumeButton = document.getElementById("volume-icon");
+
+    if (volumeButton.classList.contains("fa-volume-mute")){
         muted = false;
-        $("#volume-icon").removeClass();
-        $("#volume-icon").addClass("fas fa-volume-up");
+        volumeButton.classList.remove("fa-volume-mute");
+        volumeButton.classList.add("fa-volume-up");
     } else {
-        console.log("no");
         muted = true;
-        $("#volume-icon").removeClass();
-        $("#volume-icon").addClass("fas fa-volume-mute");
+        volumeButton.classList.remove("fa-volume-up");
+        volumeButton.classList.add("fa-volume-mute")
     }
 }
 
