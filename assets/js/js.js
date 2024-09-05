@@ -25,9 +25,15 @@ function soundTick() {
         return;
     }
     let tAudio = new Audio("assets/audio/clock-ticking.mp3");
-    tAudio.pause();
-    tAudio.currentTime = 0;
-    tAudio.play();
+    
+    var playPromise = tAudio.play();
+ 
+    if (playPromise !== undefined) {
+        playPromise.then(_ => {})
+        .catch(error => {
+        // Auto-play was prevented
+        });
+    }
     setInterval(function() {
         if(tAudio.currentTime > 1){
             tAudio.pause();
