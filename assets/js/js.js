@@ -24,7 +24,7 @@ function soundTick() {
     if (muted){
         return;
     }
-    let tAudio = new Audio("Clock-Ticking.mp3");
+    let tAudio = new Audio("../audio/clock-ticking.mp3");
     tAudio.pause();
     tAudio.currentTime = 0;
     tAudio.play();
@@ -40,7 +40,7 @@ function soundTick() {
 
 function soundAlarm() {
     let amount = 3;
-    let audio = new Audio("Timer_Sound_Effect.mp3");
+    let audio = new Audio("../audio/timer-sound-effect.mp3");
 
     for (let i = 0 ; i < amount ; i++) {
         setTimeout(function(){
@@ -122,9 +122,9 @@ function stopTimer () {
     buttonManager(["start", true] , ["pause", false] , ["stop", false]);
     unFreezeIputs();
 
-    let minutes = getElementById("minutes-input");
-    let seconds = getElementById("seconds-input");
-    
+    let minutes = document.getElementById("minutes-input");
+    let seconds = document.getElementById("seconds-input");
+
     updateVal("minutes", minutes.value );
     updateVal("seconds", seconds.value );
 }
@@ -132,22 +132,29 @@ function stopTimer () {
 
 function buttonManager (...buttonArray) {
     for (let i = 0 ; i < buttonArray.length ; i++) {
-        let button = "#" + buttonArray[i][0] + "-button";
+        let button = document.getElementById(buttonArray[i][0] + "-button");
 
         if (buttonArray[i][1]){
-            $(button).removeAttr("disabled");
+            button.removeAttribute("disabled");
         } else {
-            $(button).attr("disabled", "disabled");
+            button.setAttribute("disabled", "disabled");
         }
     }
 }
 
 function freezeIputs (){
-    $("#minutes-input").attr("disabled", "disabled");
-    $("#seconds-input").attr("disabled", "disabled");
+    let minutes = document.getElementById("minutes-input");
+    console.log(minutes)
+    let seconds = document.getElementById("seconds-input");
+
+    minutes.setAttribute("disabled", "disabled");
+    seconds.setAttribute("disabled", "disabled");
 }
 
 function unFreezeIputs (){
-    $("#minutes-input").removeAttr("disabled");
-    $("#seconds-input").removeAttr("disabled");
+    let minutes = document.getElementById("minutes-input");
+    let seconds = document.getElementById("seconds-input");
+
+    seconds.removeAttribute("disabled");
+    minutes.removeAttribute("disabled");
 }
