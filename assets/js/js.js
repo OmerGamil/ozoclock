@@ -144,7 +144,6 @@ function buttonManager (...buttonArray) {
 
 function freezeIputs (){
     let minutes = document.getElementById("minutes-input");
-    console.log(minutes)
     let seconds = document.getElementById("seconds-input");
 
     minutes.setAttribute("disabled", "disabled");
