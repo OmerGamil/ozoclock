@@ -24,7 +24,7 @@ function soundTick() {
     if (muted){
         return;
     }
-    let tAudio = new Audio("../audio/clock-ticking.mp3");
+    let tAudio = new Audio("assets/audio/clock-ticking.mp3");
     tAudio.pause();
     tAudio.currentTime = 0;
     tAudio.play();
@@ -40,7 +40,7 @@ function soundTick() {
 
 function soundAlarm() {
     let amount = 3;
-    let audio = new Audio("../audio/timer-sound-effect.mp3");
+    let audio = new Audio("assets/audio/timer-sound-effect.mp3");
 
     for (let i = 0 ; i < amount ; i++) {
         setTimeout(function(){
