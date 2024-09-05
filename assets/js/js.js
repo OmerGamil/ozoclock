@@ -1,4 +1,4 @@
-let TimerObj = {
+let timerObj = {
     minutes : 0 ,
     seconds : 0 ,
     timerID : 0
@@ -24,17 +24,17 @@ function soundTick() {
     if (muted){
         return;
     }
-    let T_audio = new Audio("Clock-Ticking.mp3");
-    T_audio.pause();
-    T_audio.currentTime = 0;
-    T_audio.play();
+    let tAudio = new Audio("Clock-Ticking.mp3");
+    tAudio.pause();
+    tAudio.currentTime = 0;
+    tAudio.play();
     setInterval(function() {
-        if(T_audio.currentTime >1){
-            T_audio.pause();
+        if(tAudio.currentTime > 1){
+            tAudio.pause();
         }
     },50)
-    if (TimerObj.seconds < 2) {
-        T_audio.pause();
+    if (timerObj.seconds < 2) {
+        tAudio.pause();
     }
 }
 
@@ -73,19 +73,20 @@ function updateVal(key , val) {
         }
     }
 
-    $("#" + key).html(val || 0);
-    TimerObj[key] = val;
+    let elem = document.getElementById(key);
+    elem.innerHTML = val || 0;
+    timerObj[key] = val;
 
 }
 
-(function detectChanges (key){
-    let input = "#" + key + "-input" ;
+(function detectChanges(key) {
+    let input = document.getElementById(key + "-input") ;
 
-    $(input).change(function() {
-        updateVal(key, $(input).val());
+    input.addEventListener("change" , (event) => {
+        updateVal(key, input.value);
     });
-    $(input).keyup(function() {
-        updateVal(key, $(input).val());
+    input.addEventListener("keyup" , (event) => {
+        updateVal(key, input.value);
     });
     
     return arguments.callee;
@@ -94,35 +95,38 @@ function updateVal(key , val) {
 function startTimer () {
     buttonManager(["start", false] , ["pause", true] , ["stop", true]);
     freezeIputs();
-    TimerObj.timerID = setInterval(function(){
+    timerObj.timerID = setInterval(function(){
         soundTick();
-        TimerObj.seconds--;
-        if (TimerObj.seconds < 0){
-            if (TimerObj.minutes == 0) {
+        timerObj.seconds--;
+        if (timerObj.seconds < 0){
+            if (timerObj.minutes == 0) {
                 soundAlarm();
                 return stopTimer();
             }
-        TimerObj.seconds = 59;
-        TimerObj.minutes--;
+            timerObj.seconds = 59;
+            timerObj.minutes--;
         }
         
-        updateVal("minutes", TimerObj.minutes);
-        updateVal("seconds", TimerObj.seconds);
+        updateVal("minutes", timerObj.minutes);
+        updateVal("seconds", timerObj.seconds);
     }, 1000);
 }
 
 function pauseTimer () {
     buttonManager(["start", true] , ["pause", false] , ["stop", true]);
-    clearInterval(TimerObj.timerID);
+    clearInterval(timerObj.timerID);
 }
 
 function stopTimer () {
-    clearInterval(TimerObj.timerID);
+    clearInterval(timerObj.timerID);
     buttonManager(["start", true] , ["pause", false] , ["stop", false]);
     unFreezeIputs();
 
-    updateVal("minutes", $("#minutes-input").val());
-    updateVal("seconds", $("#seconds-input").val());
+    let minutes = getElementById("minutes-input");
+    let seconds = getElementById("seconds-input");
+    
+    updateVal("minutes", minutes.value );
+    updateVal("seconds", seconds.value );
 }
 
 
