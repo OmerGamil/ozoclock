@@ -156,6 +156,10 @@ function pauseTimer () {
     clearInterval(timerObj.timerID);
 }
 
+/**
+ * Stops the timer
+ * @function stopTimer
+ */
 function stopTimer () {
     clearInterval(timerObj.timerID);
     buttonManager(["start", true] , ["pause", false] , ["stop", false]);
@@ -168,7 +172,11 @@ function stopTimer () {
     updateVal("seconds", seconds.value );
 }
 
-
+/**
+ * Manages the Clock buttons whether they are disabled or not
+ * @function buttonManager
+ * @param  {...any} buttonArray An Array of button names and their current status
+ */
 function buttonManager (...buttonArray) {
     for (let i = 0 ; i < buttonArray.length ; i++) {
         let button = document.getElementById(buttonArray[i][0] + "-button");
@@ -181,6 +189,10 @@ function buttonManager (...buttonArray) {
     }
 }
 
+/**
+ * Freezes the input fields
+ * @function freezeIputs
+ */
 function freezeIputs (){
     let minutes = document.getElementById("minutes-input");
     let seconds = document.getElementById("seconds-input");
@@ -189,6 +201,10 @@ function freezeIputs (){
     seconds.setAttribute("disabled", "disabled");
 }
 
+/**
+ * Unfreezes the input fields
+ * @function unFreezeIputs
+ */
 function unFreezeIputs (){
     let minutes = document.getElementById("minutes-input");
     let seconds = document.getElementById("seconds-input");
