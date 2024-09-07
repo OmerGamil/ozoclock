@@ -1,9 +1,11 @@
+// Carries the values of the seconds and the minutes
 let timerObj = {
     minutes : 0 ,
     seconds : 0 ,
     timerID : 0
 }
 
+// To check if the button muted or not (default: false)
 let muted = false;
 
 /**
