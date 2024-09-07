@@ -6,6 +6,10 @@ let timerObj = {
 
 let muted = false;
 
+/**
+ * Changes the sound button icon from muted to unmuted
+ * @function soundButton
+ */
 function soundButton() {
     let volumeButton = document.getElementById("volume-icon");
 
@@ -20,6 +24,11 @@ function soundButton() {
     }
 }
 
+/**
+ * Plays the Tick sound if unmuted
+ * @function soundTick
+ * @returns nothing if muted
+ */
 function soundTick() {
     if (muted){
         return;
@@ -44,6 +53,10 @@ function soundTick() {
     }
 }
 
+/**
+ * Plays the Alarm sound
+ * @function soundAlarm
+ */
 function soundAlarm() {
     let amount = 3;
     let audio = new Audio("assets/audio/timer-sound-effect.mp3");
