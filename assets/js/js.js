@@ -147,6 +147,10 @@ function startTimer () {
     }, 1000);
 }
 
+/**
+ * Pauses the timer
+ * @function pauseTimer
+ */
 function pauseTimer () {
     buttonManager(["start", true] , ["pause", false] , ["stop", true]);
     clearInterval(timerObj.timerID);
