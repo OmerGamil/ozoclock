@@ -232,21 +232,27 @@ h2 {
     }
 }
 
+/* Media queries for mobil phones */
 @media screen and (max-width: 566px) {
+    /* Root font size changes */
     :root {
         font-size: 10px;
     }
 }
 
 @media screen and (max-width: 496px) {
+    /* Root font size changes */
     :root {
         font-size: 8px;
     }
 
+    /* the full body */
     body{
         margin: 18px 28px 0px;
     }
 
+    /* Header */ 
+    /* mute button styles */
     #sound-button {
         padding: 14px;
     }
@@ -255,10 +261,14 @@ h2 {
         font-size: 12px;
     }
 
+    /* Main */
+    /* Timer */
     h2 {
         font-size: 7.5rem;
     }
 
+    /* Control section*/
+    /* Buttons */
     #buttons {
         flex-direction: column;
     }
@@ -270,10 +280,13 @@ h2 {
 }
 
 @media screen and (max-width: 314px) {
+    /* Root font size changes */
     :root {
         font-size: 6px;
     }
 
+    /* Header */ 
+    /* mute button styles */
     #sound-button {
         padding: 10px;
     }
