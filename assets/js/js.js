@@ -70,10 +70,15 @@ function soundAlarm() {
     }
 }
 
+/**
+ * Updates the value of the clock numbers
+ * @function updateVal
+ * @param {string} key  A name of which Clock side to be updated
+ * @param {integer} val A value of the updated clock side
+ */
 function updateVal(key , val) {
     if (val < 0 ) {
         val = 0 ;
-        console.log("The Time can't be negative ,Einestein!")
     }
     
     if (key == "seconds") {
@@ -93,11 +98,17 @@ function updateVal(key , val) {
     }
 
     let elem = document.getElementById(key);
-    elem.innerHTML = val || 0;
+    elem.innerHTML = val || 0o0;
     timerObj[key] = val;
 
 }
 
+/**
+ * Self calling function
+ * Detects the changes that happens to the Clock inputs
+ * @function detectChanges
+ * @param {string} key A name of which clock side to be detected
+ */
 (function detectChanges(key) {
     let input = document.getElementById(key + "-input") ;
 
