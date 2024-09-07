@@ -65,6 +65,7 @@ main {
     padding: 0px 42px 42px 0px;
 }
 
+/* Inputs */
 .input-group {
     width: 100%;
     margin: 26px 0px;
@@ -97,6 +98,7 @@ input:disabled {
     opacity: 0.6;
 }
 
+/* Buttons */
 #buttons {
     margin-top: 12px;
 }
