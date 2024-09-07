@@ -130,19 +130,23 @@ h2 {
     margin: 12px 0;
 }
 
+/* Media queries */
 @media screen and (max-width: 1534px) {
+    /* Root font size changes */
     :root{
         font-size: 14px;
     }
 }
 
 @media screen and (max-width: 1340px) {
+    /* Main */
     main {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;     
     }
 
+    /* Controls section */
     #controls {
         display: flex;
         flex-direction: column;
@@ -153,10 +157,12 @@ h2 {
         border: none;
     }
 
+    /* Inputs */
     .input-group {
         margin: 12px 0;
     }
 
+    /* Timer */
     h2 {
         width: 80%;
         padding: 12px;
