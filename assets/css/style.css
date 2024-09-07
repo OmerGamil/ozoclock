@@ -130,7 +130,7 @@ h2 {
     margin: 12px 0;
 }
 
-/* Media queries */
+/* Media queries for large devices */
 @media screen and (max-width: 1534px) {
     /* Root font size changes */
     :root{
@@ -171,17 +171,22 @@ h2 {
     }
 }
 
+/* Media queries for taplets */
 @media screen and (max-width: 974px) {
+    /* Root font size changes */
     :root {
         font-size: 12px;
     }
 }
 
 @media screen and (max-width: 798px) {
+    /* The full body */
     body{
         margin: 32px 62px 0px;
     }
 
+    /* Header */ 
+    /* mute button styles */
     #sound-button {
         padding: 18px;
     }
@@ -190,10 +195,13 @@ h2 {
         font-size: 16px;
     }
 
+    /* Main */
+    /* Control section */
     #controls {
         align-items: center;
     }
 
+    /* Inputs */
     .input-group {
         flex-direction: column;
     }
@@ -208,6 +216,7 @@ h2 {
         text-align: center;
     }
 
+    /* Buttons */
     #buttons {
         width: 100%;
         margin-top: 22px;
