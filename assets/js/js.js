@@ -122,6 +122,11 @@ function updateVal(key , val) {
     return arguments.callee;
 })("minutes")("seconds");
 
+/**
+ * Starts the timer
+ * @function startTimer
+ * @returns {Function} Excutes the soundAlarm function if the time is done
+ */
 function startTimer () {
     buttonManager(["start", false] , ["pause", true] , ["stop", true]);
     freezeIputs();
