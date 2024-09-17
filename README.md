@@ -37,6 +37,11 @@ The Ozoclock is a simple alarm that allows you to set a specific time period of 
   - PC: Hp pavilion windows 10, Runnning Chrome, Opera or FireFox, 27" monitor (1920x1080).
   - Phone: Iphone 14 pro, Running Chrome, 6.1" display (2532x1170).
 
+- I tested the buttons and they are freezing when the counter starts.
+- I tested the inputs and they have limits when typing more than 300 for minutes and 59 for seconds.
+- I tested mute button and it mutes the ticking sound directly after clicking it.
+- I tested the responsiveness of the website and it is responsive till 280px screen width.
+
 ### Validation
 
 - HTML
