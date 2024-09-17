@@ -34,7 +34,6 @@ h1 {
     text-transform: uppercase;
     font-size: 6rem;
     color: #222;
-    letter-spacing: 1;
     display: inline-block;
     cursor: pointer;
 }
@@ -275,7 +274,9 @@ h2 {
 
     #buttons > button {
         width: 100%;
-        padding: 12px unset;
+        padding: unset;
+        padding-top: 12px;
+        padding-bottom: 12px;
     }
 }
 

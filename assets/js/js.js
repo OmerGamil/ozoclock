@@ -3,7 +3,7 @@ let timerObj = {
     minutes : 0 ,
     seconds : 0 ,
     timerID : 0
-}
+};
 
 // To check if the button muted or not (default: false)
 let muted = false;
@@ -22,7 +22,7 @@ function soundButton() {
     } else {
         muted = true;
         volumeButton.classList.remove("fa-volume-up");
-        volumeButton.classList.add("fa-volume-mute")
+        volumeButton.classList.add("fa-volume-mute");
     }
 }
 
@@ -49,7 +49,7 @@ function soundTick() {
         if(tAudio.currentTime > 1){
             tAudio.pause();
         }
-    },50)
+    },50);
     if (timerObj.seconds < 2) {
         tAudio.pause();
     }
