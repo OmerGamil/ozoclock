@@ -79,6 +79,26 @@ Color Scheme were simple black and white color palette.
 
 ![Image area](assets/images/counter.jpg)
 
+## Accessibility
+
+1. All html pages use semantic HTML headings.
+2. Aria-labels are used where necessary (label, inputs)
+3. Color-contrast for foreground and background meet WCAG standard guidelines.
+
+
+## Technologies Used
+
+### Languages
+
+- HTML5
+- CSS3
+- JavaScript
+
+### Other Sites and Softwares
+
+- [Github](https://github.com/) - For version control and deployment.
+- [Font Awesome](https://fontawesome.com/icons) - For icons in the footer, magic wand and timer challenge.
+
 ## Testing and Validation 
 
 ### Testing 
