@@ -3,6 +3,57 @@
 The Ozoclock is a simple alarm that allows you to set a specific time period of up to 300 minutes. The alarm has the classic old-fashioned sound and there is the usual ticking sound of clocks which you can turn off if you want from the mute button at the top of the screen.
 
 ![Mockup](assets/images/mock-up.jpg)
+Live Link: https://omergamil.github.io/ozoclock/
+
+## User Experience - UX
+
+### Strategy
+
+I wanted to make a very simple alarm clock that would help people set a small time period of no more than 300 minutes.<br>
+The Clock should be as simple as possible so that anyone can understand its function without any effort.
+
+>The project has no prospective client, it is built for fun and engagement and learning purposes.
+
+__User Stories__
+- I want to be able to understand the functionality of the site.
+- I want to be able to set a small period easy and fast.
+- I want to be able to see the remaining time clearly.
+- I want to be able to know if the time period is up with an alarm sound.
+- I want a simple and good looking design.
+
+__User Goals__
+ - Set a time period fast and easy.
+ - Get notified when the time period is up.
+
+ __Site Owner Goals__
+ - Create a very simple alarm clock.
+ - Design the clock to be simple and good looking.
+ - The site is responsive and easy to navigate.
+
+
+### Scope
+
+This took a bit of time in figuring out, it was a continuous development in this as I progressed in my javascript learning. The initial setting is to have one single page with all the buttons and the clock, so what this page has to have is:
+
+- The Logo: simple beautiful logo on the top left corner.
+- Mute button: a mute button in the top right corner to mute the ticking sound if needed.
+- Input fields: two input field for setting the minutes and seconds.
+- Start, Stop, Pause Buttons: Three buttons for starting and stopping the Clock when needed.
+- Clock numbers: numbers to show the remaining time.
+
+### Structure
+
+The Clock didn't need more than one page, only three buttons were always shown in the bottom area, the inputs were above the buttons, the logo and mute button were always at the top opposite each other, and the counter was shown in the largest possible size with some changes depending on the device used.
+
+## User  Interface - Surface
+
+### Typography
+
+The logo font was an original custom font made by me. Montserrat font for the rest of the site was taken from Google Fonts.
+
+### Colors
+
+Color Scheme were simple black and white color palette.
 
 ## Features 
 
