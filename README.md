@@ -128,33 +128,54 @@ Color Scheme were simple black and white color palette.
 
 - W3C Validator 
     - The HTML for the Alarm has no errors.
+    ![html-validation](assets/images/html-validation.jpeg)
 
 #### CSS Validation 
 
 - JigSaw Validator
     - The CSS for the Alarm has no errors or warnings.
+    ![css-validation](assets/images/css-validation.jpeg)
 
 #### JavaScript Validation 
 
 - JSHint Validator 
-    - The JavaScript for the game had no errors.
-        - The following metrics were returned:
-            - There are 18 functions in this file.
-            - Function with the largest signature take 2 arguments, while the median is 0.
-            - Largest function has 13 statements in it, while the median is 4.- The most complex function has a cyclomatic complexity value of 8 while the median is 1.
+    - The JavaScript for the Clock had no errors.
+    - The following metrics were returned:
+        - There are 18 functions in this file.
+        - Function with the largest signature take 2 arguments, while the median is 0.
+        - Largest function has 13 statements in it, while the median is 4.
+        - The most complex function has a cyclomatic complexity value of 8 while the median is 1.
 
 ## Deployment
 
-The OzoClock Alarm was deployed to [GitHub](https://github.com/) pages.
+### Github Pages
 
-The live link can be found here: https://omergamil.github.io/ozoclock.github.io/
+The website is deployed using Github Pages functionality provided by Github.<br>
+The steps to follow are:
 
-## Credits 
+1. Create a Github account if you dont already have one
+2. Create a new repository and upload all your files.
+3. Go to settings tab on the menu bar of the repository.
+4. In the left section, under Code and automation, click on Pages.
+5. Under the title "Build and deployment", select the source: Deploy from a branch.
+6. Under the branch section below that, select /root folder and save.
+7. Come back to Code section of the repository. Give a few minutes and refresh the page. You will find Deployments section generated the right side with a URL to the deployed site.
 
-### Acknowledgement
+## Credits
 
-I'd like to give a Great Thamks to Spencer Barriball, my mentor at Code Institute, for giving me valuable guidance and support throught the duration of this project.
+### Code Used
+
+- [Accordion - W3C Schools](https://www.w3schools.com/howto/howto_js_accordion.asp) - For logic on Accordions
+- [Stack Overflow](https://stackoverflow.com/questions/4435776/simple-clock-that-counts-down-from-30-seconds-and-executes-a-function-afterward) - For set interval function
 
 ### Media
 
+- [UI.dev](https://ui.dev/amiresponsive) Used to generate the responsive image on top of the README file
+- [Google Fonts](https://fonts.google.com/specimen/MedievalSharp) - For MedievalSharp font
 - [Favicon](https://favicon.io/) was used to source the fav-icon for the tab.
+
+
+## Acknowledgements
+
+- Spencer Barriball - Mentor : For guidance and review on the website.
+- Henna Singh - Developer : For the inspiration for the README.md.
